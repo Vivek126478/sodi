@@ -1,1 +1,2 @@
 a = "IIIIT KOTTAYAM"
+b = "MG"
