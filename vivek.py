@@ -1,2 +1,3 @@
-a = "my name is vivek"
-b = "my name is vivek kumar"
+from vivek2 import chatbook
+
+user1 = chatbook()

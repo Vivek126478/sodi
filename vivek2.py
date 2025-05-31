@@ -17,7 +17,11 @@ class chatbook:
         elif user_input == "2":
             self.login()
         elif user_input == "3":
-            pass
+            self.write_post()
+        elif user_input == "4":
+            self.send_message()
+        else:
+            exit("Thank you for using Chatbook. Goodbye!")
 
 
     def signup(self):
@@ -41,6 +45,24 @@ class chatbook:
                 print("Invalid credentials. Please try again.\n")
         self.menu()
 
+    def write_post(self):
+        if not self.logged_in:
+            print("You need to log in first!")
+            return
+        elif self.logged_in:
+            post_content = input("Write your post: ")
+            print(f"Your post has been created: {post_content}\n")
+        self.menu()
+
+    def send_message(self):
+        if not self.logged_in:
+            print("You need to log in first!")
+            return
+        elif self.logged_in:
+            friend = input("Enter the name of your friend: ")
+            message = input("Enter your message: ")
+            print(f"Your message to {friend} has been sent: {message}\n")
+        self.menu()
 
 
 obj = chatbook()
